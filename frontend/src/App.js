@@ -1,7 +1,6 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Router and Routes
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import AQI from './pages/AQI';
@@ -10,15 +9,15 @@ import AboutUs from './pages/Aboutus';
 
 const App = () => {
   return (
-    <Router>
+<div>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/aqi" component={AQI} />
-        <Route path="/travel" component={GreenPath} />
-        <Route path="/about" component={AboutUs} />
-      </Switch>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aqi" element={<AQI />} />
+        <Route path="/travel" element={<GreenPath />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+      </div>
   );
 };
 
