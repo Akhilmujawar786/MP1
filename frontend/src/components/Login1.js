@@ -3,6 +3,7 @@ import './Login1.css'; // Import CSS file for styling
 
 const Login = () => {
   // State variables to store user input and validation errors
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
@@ -12,6 +13,11 @@ const Login = () => {
     e.preventDefault();
     // Validate form fields
     const validationErrors = {};
+    if (!name.trim()) {
+      validationErrors.name = 'Name is required';
+    } else if (!/^[a-zA-Z]+$/.test(name.trim())) {
+      validationErrors.name = 'Name should contain only alphabets';
+    }
     if (!email.trim()) {
       validationErrors.email = 'Email is required';
     }
@@ -24,6 +30,7 @@ const Login = () => {
     if (Object.keys(validationErrors).length === 0) {
       // Here, you would typically send the credentials to the backend for authentication
       // For this example, we'll just display them in the console
+      console.log('Name:', name);
       console.log('Email:', email);
       console.log('Password:', password);
     }
@@ -33,6 +40,16 @@ const Login = () => {
     <div className="login-container">
       <h2>LOGIN</h2>
       <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          {errors.name && <span className="error">{errors.name}</span>}
+        </div>
         <div className="form-group">
           <label>Email:</label>
           <input
