@@ -1,5 +1,4 @@
 // Navbar.js
-
 import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you are using React Router for routing
 import './Navbar.css';
