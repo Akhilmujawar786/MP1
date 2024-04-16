@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
-  max-width: 400px;
- 
-  margin:  auto;
+  max-width: 300px;
+ padding: 20px 5px;
+  margin:  100px auto;
   padding: 30px;
   border-radius: 10px;
   background-color: rgb(243, 238, 234); /* Lighter color */

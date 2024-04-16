@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Aboutus />} />
-          <Route path="/greenpath" element={isLoggedIn ? <GreenPath /> : <Login setLoggedIn={setIsLoggedIn} destination={location.pathname} />} />
+          <Route path="/travel" element={isLoggedIn ? <GreenPath /> : <Login setLoggedIn={setIsLoggedIn} destination={location.pathname} />} />
           <Route path="/aqi" element={isLoggedIn ? <AQI /> : <Login setLoggedIn={setIsLoggedIn} destination={location.pathname} />} />
           <Route path="/login" element={<Login setLoggedIn={setIsLoggedIn} destination={location.pathname} />} />
           <Route path="/signup" element={<Signup />} />
@@ -31,7 +31,7 @@ function App() {
             <Routes>
                 <Route exact path="/" component={Home} />
                 <Route path="/aqi" component={AQI} />
-                <Route path="/greenpath" component={GreenPath} />
+                <Route path="/travel" component={GreenPath} />
                 <Route path="/about" component={AboutUs} />
             </Routes>
         
