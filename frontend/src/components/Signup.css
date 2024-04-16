@@ -3,14 +3,14 @@
   margin: 0 auto;
   padding: 30px;
   border-radius: 10px;
-  background-color: rgb(249, 232, 217); /* Lighter color */
+  background-color: rgb(243, 238, 234); /* Lighter color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .signup-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: rgb(82, 120, 83); /* Darker color */
+  color: rgb(43, 69, 44); /* Darker color */
 }
 
 .form-group {
@@ -20,7 +20,7 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: rgb(82, 120, 83); /* Darker color */
+  color: rgb(43, 69, 44); /* Darker color */
 }
 
 .form-group input {
@@ -45,7 +45,7 @@
 button {
   width: 100%;
   padding: 12px;
-  background-color: rgb(82, 120, 83); /* Darker color */
+  background-color: rgb(43, 69, 44); /* Darker color */
   color: #ffffff;
   border: none;
   border-radius: 5px;
