@@ -1,15 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Router and Routes
 import Navbar from './components/Navbar';
-import Login from './components/Login1';
-function App() {
+import Home from './pages/Home';
+import AQI from './pages/AQI';
+import GreenPath from './pages/GreenPath';
+import AboutUs from './pages/Aboutus';
+
+const App = () => {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Login/>
-    </div>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aqi" element={<AQI />} />
+        <Route path="/travel" element={<GreenPath />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+      </div>
   );
 };
 
 export default App;
-
