@@ -1,7 +1,7 @@
 import React from "react";
 
 function   GreenPath() {
-    return <div>GreenPath</div>;
+    return <div>GreenPathh</div>;
 }
 
 export default GreenPath;
