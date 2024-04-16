@@ -25,42 +25,48 @@ const Login = ({ setLoggedIn, destination }) => {
   };
 
   return (
-    <div className="login-container">
-      <h2>LOGIN</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+      <div className="login-container">
+        <video autoPlay loop muted className="background-video">
+          <source src={require('../videos/videoplayback.mp4')} type="video/mp4" />
+        </video>
+        <div className="form-container">
+          <h2>LOGIN</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label>Username:</label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Email:</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Password:</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit">Login</button>
+            {error && <div className="error-message">{error}</div>}
+            <p className="signup-message">Don't have an account? <Link to="/signup">Sign up</Link></p>
+          </form>
         </div>
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-        {error && <div className="error-message">{error}</div>}
-        <p className="signup-message">Don't have an account? <Link to="/signup">Sign up</Link></p>
-      </form>
-    </div>
-  );
-};
+      </div>
+    );
+  };
+  
 
 export default Login;
