@@ -1,0 +1,5 @@
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://root:root@springboot.qiez2ax.mongodb.net/?retryWrites=true&w=majority&appName=SpringBoot
+            database: Task
