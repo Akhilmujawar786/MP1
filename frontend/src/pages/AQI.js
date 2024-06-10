@@ -112,12 +112,15 @@ const GameOfLife = () => {
         >
           {running ? 'Stop' : 'Start'}
         </button>
+        <br></br>
+        <br></br>
+
         <button
           onClick={() => {
             setGrid(generateInitialGrid(generateInitialData()));
             setGeneration(0);
           }}
-        >
+        > 
           Reset
         </button>
       </div>
