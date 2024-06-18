@@ -1,0 +1,33 @@
+.grid-container {
+  margin: 10% 300px;
+}
+
+.grid {
+  margin-top: -100px;
+  white-space: pre;
+}
+
+button {
+  margin: 2px;
+}
+.btn-primary{
+  width: 100px;
+}
+.btn-light{
+  width: 100px;
+}
+.btn-danger{
+  width: 100px;
+}
+.btn-warning{
+  width: 100px;
+}
+.btn{
+  width: 100px;
+}
+.one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -110px;
+}
